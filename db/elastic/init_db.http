@@ -1,0 +1,30 @@
+# Initialize database file for the Elasticsearch
+
+PUT http://localhost:9200/plane-type
+Content-Type: application/json
+
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    }
+  },
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "manifacturer": {
+        "type": "text"
+      },
+      "model": {
+        "type": "text"
+      },
+      "capacity": {
+        "type": "integer"
+      }
+    }
+  }
+}
+

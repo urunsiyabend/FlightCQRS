@@ -1,0 +1,22 @@
+###
+GET localhost:8080/plane-types HTTP/1.1
+Accept: application/json
+
+###
+
+POST localhost:8080/plane-types HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "manufacturer": "Boeing",
+  "model": "737-800",
+  "capacity": 215
+}
+
+###
+
+DELETE localhost:8080/plane-types/2 HTTP/1.1
+Accept: application/json
+
+###
